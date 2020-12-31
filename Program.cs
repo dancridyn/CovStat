@@ -25,26 +25,35 @@ namespace CovStat
             dynamic covidArray = JObject.Parse(covidData);
 
             Console.WriteLine("Please enter the country code:");
-            String countryCode = Console.ReadLine();
+            String countryCode = Console.ReadLine().ToUpper();
 
-            Console.WriteLine("Continent: " + covidArray[countryCode]["continent"].ToString());
-            Console.WriteLine("Location: " + covidArray[countryCode]["location"].ToString());
-            Console.WriteLine("Total Cases: " + covidArray[countryCode]["total_cases"].ToString());
-            Console.WriteLine("New Cases: " + covidArray[countryCode]["new_cases"].ToString());
-            Console.WriteLine("Total Deaths: " + covidArray[countryCode]["total_deaths"].ToString());
-            Console.WriteLine("New Cases: " + covidArray[countryCode]["new_deaths"].ToString());
-            Console.WriteLine("Reproduction Rate: " + covidArray[countryCode]["reproduction_rate"].ToString());
-            Console.WriteLine("ICU Patients: " + covidArray[countryCode]["icu_patients"].ToString());
-            Console.WriteLine("Hospital Patients: " + covidArray[countryCode]["hosp_patients"].ToString());
-            Console.WriteLine("Total Tests: " + covidArray[countryCode]["total_tests"].ToString());
-            Console.WriteLine("New Tests: " + covidArray[countryCode]["new_tests"].ToString());
-            Console.WriteLine("Positive Rate: " + covidArray[countryCode]["positive_rate"].ToString());
-            Console.WriteLine("Total Vaccinations: " + covidArray[countryCode]["total_vaccinations"].ToString());
-            Console.WriteLine("Population: " + covidArray[countryCode]["population"].ToString());
-            Console.WriteLine("Life expectancy: " + covidArray[countryCode]["life_expectancy"].ToString());
+            try
+            {
+                Console.Clear();
+                Console.WriteLine("Continent: " + covidArray[countryCode]["continent"].ToString());
+                Console.WriteLine("Location: " + covidArray[countryCode]["location"].ToString());
+                Console.WriteLine("Total Cases: " + covidArray[countryCode]["total_cases"].ToString());
+                Console.WriteLine("New Cases: " + covidArray[countryCode]["new_cases"].ToString());
+                Console.WriteLine("Total Deaths: " + covidArray[countryCode]["total_deaths"].ToString());
+                Console.WriteLine("New Deaths: " + covidArray[countryCode]["new_deaths"].ToString());
+                Console.WriteLine("Reproduction Rate: " + covidArray[countryCode]["reproduction_rate"].ToString());
+                Console.WriteLine("ICU Patients: " + covidArray[countryCode]["icu_patients"].ToString());
+                Console.WriteLine("Hospital Patients: " + covidArray[countryCode]["hosp_patients"].ToString());
+                Console.WriteLine("Total Tests: " + covidArray[countryCode]["total_tests"].ToString());
+                Console.WriteLine("New Tests: " + covidArray[countryCode]["new_tests"].ToString());
+                Console.WriteLine("Positive Rate: " + covidArray[countryCode]["positive_rate"].ToString());
+                Console.WriteLine("Total Vaccinations: " + covidArray[countryCode]["total_vaccinations"].ToString());
+                Console.WriteLine("Population: " + covidArray[countryCode]["population"].ToString());
+                Console.WriteLine("Life expectancy: " + covidArray[countryCode]["life_expectancy"].ToString());
 
-            Console.WriteLine(Environment.NewLine);
-            PrintStatistics();
+                Console.WriteLine(Environment.NewLine);
+                PrintStatistics();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Unknown country. Try again.");
+                PrintStatistics();
+            }
         }
     }
 }
