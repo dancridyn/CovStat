@@ -13,6 +13,8 @@ namespace CovStat
 
         private static void PrintStatistics()
         {
+            // fuck covid
+
             String covidData = String.Empty;
             String covidUrl = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/latest/owid-covid-latest.json";
 
