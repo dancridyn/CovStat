@@ -34,18 +34,18 @@ namespace CovStat
                 Console.Clear();
                 Console.WriteLine("Continent: " + covidArray[countryCode]["continent"].ToString());
                 Console.WriteLine("Location: " + covidArray[countryCode]["location"].ToString());
-                Console.WriteLine("Total Cases: " + covidArray[countryCode]["total_cases"].ToString());
-                Console.WriteLine("New Cases: " + covidArray[countryCode]["new_cases"].ToString());
-                Console.WriteLine("Total Deaths: " + covidArray[countryCode]["total_deaths"].ToString());
-                Console.WriteLine("New Deaths: " + covidArray[countryCode]["new_deaths"].ToString());
+                Console.WriteLine("Total Cases: " + string.Format("{0:n0}", covidArray[countryCode]["total_cases"]));
+                Console.WriteLine("New Cases: " + string.Format("{0:n0}", covidArray[countryCode]["new_cases"]));
+                Console.WriteLine("Total Deaths: " + string.Format("{0:n0}", covidArray[countryCode]["total_deaths"]));
+                Console.WriteLine("New Deaths: " + string.Format("{0:n0}", covidArray[countryCode]["new_deaths"]));
                 Console.WriteLine("Reproduction Rate: " + covidArray[countryCode]["reproduction_rate"].ToString());
                 Console.WriteLine("ICU Patients: " + covidArray[countryCode]["icu_patients"].ToString());
-                Console.WriteLine("Hospital Patients: " + covidArray[countryCode]["hosp_patients"].ToString());
-                Console.WriteLine("Total Tests: " + covidArray[countryCode]["total_tests"].ToString());
-                Console.WriteLine("New Tests: " + covidArray[countryCode]["new_tests"].ToString());
+                Console.WriteLine("Hospital Patients: " + string.Format("{0:n0}", covidArray[countryCode]["hosp_patients"]));
+                Console.WriteLine("Total Tests: " + string.Format("{0:n0}", covidArray[countryCode]["total_tests"]));
+                Console.WriteLine("New Tests: " + string.Format("{0:n0}", covidArray[countryCode]["new_tests"]));
                 Console.WriteLine("Positive Rate: " + covidArray[countryCode]["positive_rate"].ToString());
-                Console.WriteLine("Total Vaccinations: " + covidArray[countryCode]["total_vaccinations"].ToString());
-                Console.WriteLine("Population: " + covidArray[countryCode]["population"].ToString());
+                Console.WriteLine("Total Vaccinations: " + string.Format("{0:n0}", covidArray[countryCode]["total_vaccinations"]));
+                Console.WriteLine("Population: " + string.Format("{0:n0}", covidArray[countryCode]["population"]));
                 Console.WriteLine("Life expectancy: " + covidArray[countryCode]["life_expectancy"].ToString());
 
                 Console.WriteLine(Environment.NewLine);
